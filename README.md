@@ -66,8 +66,6 @@ A professional mobile application developed using **Flutter** and **Firebase** f
 
 ```text
 lib/
-├── models/
-├── controllers/
 ├── services/
 ├── views/
 │   ├── authentication/
