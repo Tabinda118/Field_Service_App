@@ -2,8 +2,8 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:field_service_app/views/jobmanagement/job_details_screen.dart';
 import 'package:field_service_app/views/notifications/notification_screen.dart';
 import 'package:field_service_app/views/reports/service_history_screen.dart';
+import 'package:field_service_app/views/settings/settings_screen.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -30,7 +30,7 @@ class DashboardScreen extends StatelessWidget {
               );
             },
             icon: const Icon(
-              Icons.notifications,
+              Icons.notifications,color: Colors.deepOrange,
             ),
           ),
 
@@ -39,9 +39,21 @@ class DashboardScreen extends StatelessWidget {
               await FirebaseAuth.instance.signOut();
             },
             icon: const Icon(
-              Icons.logout,
+              Icons.logout,color: Colors.blue,
             ),
           ),
+
+          IconButton(
+            onPressed: () {
+              Get.to(
+                    () => const SettingsScreen(),
+              );
+            },
+            icon: const Icon(
+              Icons.settings,color: Colors.white,
+            ),
+          ),
+
         ],
       ),
       body: SafeArea(
